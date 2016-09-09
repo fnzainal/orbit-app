@@ -31,10 +31,10 @@ public class Courgette extends TextView{
         init();
     }
 
-    public Courgette(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    /*public Courgette(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init();
-    }
+    }*/
 
     private void init() {
         Typeface tf = Typeface.createFromAsset(getContext().getAssets(),
