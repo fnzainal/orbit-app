@@ -17,10 +17,10 @@ import id.zainalfahrudin.orbit.camera.GraphicOverlay;
  * Factory for creating a tracker and associated graphic to be associated with a new barcode.  The
  * multi-processor uses this factory to create barcode trackers as needed -- one for each barcode.
  */
-class BarcodeTrackerFactory implements MultiProcessor.Factory<Barcode> {
+public class BarcodeTrackerFactory implements MultiProcessor.Factory<Barcode> {
     private GraphicOverlay<BarcodeGraphic> mGraphicOverlay;
 
-    BarcodeTrackerFactory(GraphicOverlay<BarcodeGraphic> barcodeGraphicOverlay) {
+    public BarcodeTrackerFactory(GraphicOverlay<BarcodeGraphic> barcodeGraphicOverlay) {
         mGraphicOverlay = barcodeGraphicOverlay;
     }
 

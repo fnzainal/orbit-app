@@ -1,4 +1,4 @@
-package id.zainalfahrudin.orbit;
+package id.zainalfahrudin.orbit.activity;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -13,6 +13,7 @@ import com.jakewharton.rxbinding.widget.RxTextView;
 
 import java.util.regex.Pattern;
 
+import id.zainalfahrudin.orbit.R;
 import rx.Observable;
 import rx.functions.Action1;
 import rx.functions.Func1;

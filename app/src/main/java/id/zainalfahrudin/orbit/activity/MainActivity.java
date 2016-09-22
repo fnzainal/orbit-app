@@ -1,4 +1,4 @@
-package id.zainalfahrudin.orbit;
+package id.zainalfahrudin.orbit.activity;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -34,6 +34,9 @@ import com.google.android.gms.vision.barcode.BarcodeDetector;
 
 import java.io.IOException;
 
+import id.zainalfahrudin.orbit.BarcodeGraphic;
+import id.zainalfahrudin.orbit.BarcodeTrackerFactory;
+import id.zainalfahrudin.orbit.R;
 import id.zainalfahrudin.orbit.camera.CameraSource;
 import id.zainalfahrudin.orbit.camera.CameraSourcePreview;
 import id.zainalfahrudin.orbit.camera.GraphicOverlay;

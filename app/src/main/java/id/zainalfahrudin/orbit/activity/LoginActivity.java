@@ -1,4 +1,4 @@
-package id.zainalfahrudin.orbit;
+package id.zainalfahrudin.orbit.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.content.SharedPreferences;
+
+import id.zainalfahrudin.orbit.R;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -67,5 +69,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 //aksi
                 break;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(Intent.ACTION_MAIN)
+                .addCategory(Intent.CATEGORY_HOME)
+                .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
+                        | Intent.FLAG_ACTIVITY_NEW_TASK));
     }
 }

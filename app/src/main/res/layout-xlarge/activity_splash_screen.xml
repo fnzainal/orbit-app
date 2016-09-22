@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context="id.zainalfahrudin.orbit.SplashScreen">
+    tools:context="id.zainalfahrudin.orbit.activity.SplashScreen">
 
     <TextView
         android:text="I'm A splashscreen!"

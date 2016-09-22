@@ -1,10 +1,12 @@
-package id.zainalfahrudin.orbit;
+package id.zainalfahrudin.orbit.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
+
+import id.zainalfahrudin.orbit.R;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -24,6 +26,7 @@ public class SplashScreen extends AppCompatActivity {
                     startActivity(new Intent(SplashScreen.this,LoginActivity.class)
                             .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
                                     | Intent.FLAG_ACTIVITY_NEW_TASK)
+
                     );
                 }else{
                     //jika panjang karakter username lebih dari = 5 maka masuk ke FirstActivity
