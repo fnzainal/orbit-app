@@ -1,4 +1,4 @@
-package id.zainalfahrudin.orbit;
+package id.zainalfahrudin.orbit.barcode;
 
 /**
  * Wrote by :

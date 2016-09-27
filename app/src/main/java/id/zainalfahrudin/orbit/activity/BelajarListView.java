@@ -35,6 +35,7 @@ public class BelajarListView extends AppCompatActivity{
 
         final ListView listView = (ListView) findViewById(R.id.lvData);
 
+
         /*final String[] stringsArray = new String[] {
                 "Android List View",
                 "Adapter implementation",
@@ -63,13 +64,15 @@ public class BelajarListView extends AppCompatActivity{
         });*/
 
         final List<DataModel> data = new ArrayList<>();
-        String loremipsum = getString(R.string.lorem_ipsum);
+
         data.add(new DataModel("Android", "Android is a mobile operating system developed by Google, based on the Linux kernel and designed primarily for touchscreen mobile devices such as smartphones and tablets. Android's user interface is mainly based on direct manipulation, using touch gestures that loosely correspond to real-world actions, such as swiping, tapping and pinching, to manipulate on-screen objects, along with a virtual keyboard for text input. In addition to touchscreen devices, Google has further developed Android TV for televisions, Android Auto for cars, and Android Wear for wrist watches, each with a specialized user interface. Variants of Android are also used on notebooks, game consoles, digital cameras, and other electronics.",
                 R.drawable.android));
         data.add(new DataModel("Arch", "Arch Linux (or Arch /ˈɑːrtʃ/)[3] is a Linux distribution for computers based on IA-32 and x86-64 architectures.[4][b][c] It is composed predominantly of free and open-source software,[5] and supports community involvement.[6] The design approach of the development team follows the KISS principle (\"keep it simple, stupid\") as the general guideline, and focuses on elegance, code correctness, minimalism and simplicity, and expects the user to be willing to make some effort to understand the system's operation.[7] A package manager written specifically for Arch Linux, pacman, is used to install, remove and update software packages."
                 ,R.drawable.arch));
-        data.add(new DataModel("Debian", "Debian (/ˈdɛbiən/)[2] is a Unix-like computer operating system that is composed entirely of free software, most of which is under the GNU General Public License, and packaged by a group of individuals called the Debian Project. Three main branches are offered: stable (jessie), testing (stretch), and unstable (sid). The Debian stable Linux distribution is one of the most popular for personal computers and network servers, and has been used as a base for several other distributions. The Debian testing and unstable branches are rolling release and eventually become the stable distribution after development and testing. Packages are first uploaded to unstable, from which they migrate to testing. When testing is mature enough it becomes stable.[3]",R.drawable.debian));
-        data.add(new DataModel("Fedora", "Fedora /fᵻˈdɒr.ə/ (formerly Fedora Core) is an operating system based on the Linux kernel, developed by the community-supported Fedora Project and sponsored by Red Hat. Fedora contains software distributed under a free and open-source license and aims to be on the leading edge of such technologies.[5][6]",R.drawable.fedora));
+        data.add(new DataModel("Debian", "Debian (/ˈdɛbiən/)[2] is a Unix-like computer operating system that is composed entirely of free software, most of which is under the GNU General Public License, and packaged by a group of individuals called the Debian Project. Three main branches are offered: stable (jessie), testing (stretch), and unstable (sid). The Debian stable Linux distribution is one of the most popular for personal computers and network servers, and has been used as a base for several other distributions. The Debian testing and unstable branches are rolling release and eventually become the stable distribution after development and testing. Packages are first uploaded to unstable, from which they migrate to testing. When testing is mature enough it becomes stable.[3]",
+                R.drawable.debian));
+        data.add(new DataModel("Fedora", "Fedora /fᵻˈdɒr.ə/ (formerly Fedora Core) is an operating system based on the Linux kernel, developed by the community-supported Fedora Project and sponsored by Red Hat. Fedora contains software distributed under a free and open-source license and aims to be on the leading edge of such technologies.[5][6]",
+                R.drawable.fedora));
         data.add(new DataModel("Kali", "Kali Linux is a Debian-derived Linux distribution designed for digital forensics and penetration testing. It is maintained and funded by Offensive Security Ltd. Mati Aharoni, Devon Kearns and Raphaël Hertzog are the core developers.",
                 R.drawable.kali));
         data.add(new DataModel("Mint", "Linux Mint is a community-driven Linux distribution based on Debian and Ubuntu that strives to be a \"modern, elegant and comfortable operating system which is both powerful and easy to use.\"[5] Linux Mint provides full out-of-the-box multimedia support by including some proprietary software and comes bundled with a variety of free and open-source applications;[6][7] however, with the release of v18 \"Sarah\" some previously included proprietary software such as multimedia codecs was no longer included by default. Its motto is \"from freedom came elegance.\"",
@@ -83,15 +86,15 @@ public class BelajarListView extends AppCompatActivity{
 
         CustomAdapter adapter = new CustomAdapter(this, data);
         listView.setAdapter(adapter);
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Snackbar.make(listView,data.get(position).getNama_os(), Snackbar.LENGTH_SHORT).show();
-                Intent intent = new Intent(BelajarListView.this, FirstActivity.class);
-                intent.putExtra(TITLE_OS,data.get(position).getNama_os());
-                intent.putExtra(DESC,data.get(position).getDeskripsi());
-                intent.putExtra(ICON,data.get(position).getIcon());
-                startActivity(intent);
+                Intent fulan = new Intent(BelajarListView.this, FirstActivity.class);
+                fulan.putExtra(TITLE_OS,data.get(position).getNama_os());
+                fulan.putExtra(DESC,data.get(position).getDeskripsi());
+                fulan.putExtra(ICON, data.get(position).getIcon());
+                startActivity(fulan);
             }
         });
     }

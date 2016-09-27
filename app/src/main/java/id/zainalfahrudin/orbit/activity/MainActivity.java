@@ -34,8 +34,8 @@ import com.google.android.gms.vision.barcode.BarcodeDetector;
 
 import java.io.IOException;
 
-import id.zainalfahrudin.orbit.BarcodeGraphic;
-import id.zainalfahrudin.orbit.BarcodeTrackerFactory;
+import id.zainalfahrudin.orbit.barcode.BarcodeGraphic;
+import id.zainalfahrudin.orbit.barcode.BarcodeTrackerFactory;
 import id.zainalfahrudin.orbit.R;
 import id.zainalfahrudin.orbit.camera.CameraSource;
 import id.zainalfahrudin.orbit.camera.CameraSourcePreview;

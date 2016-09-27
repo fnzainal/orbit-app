@@ -26,8 +26,13 @@ public class FirstActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
 
         if (bundle!=null){
-            tvName.setText(bundle.getString(BelajarListView.TITLE_OS));
-            tvDeskripsi.setText(bundle.getString(BelajarListView.DESC));
+            String namaOs = bundle.getString(BelajarListView.TITLE_OS);
+            String deskripsi = bundle.getString(BelajarListView.DESC);
+
+            Log.d(TAG, "onCreate: data intent = "+namaOs+", "+deskripsi);
+
+            tvName.setText(namaOs);
+            tvDeskripsi.setText(deskripsi);
             int icon = bundle.getInt(BelajarListView.ICON);
             imageView.setImageDrawable(getResources().getDrawable(icon));
         }else{

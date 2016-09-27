@@ -8,6 +8,10 @@ package id.zainalfahrudin.orbit.model;
  */
 
 public class DataModel {
+    private String deskripsi;
+    private String nama_os;
+    private int icon;
+
     public String getNama_os() {
         return nama_os;
     }
@@ -32,12 +36,11 @@ public class DataModel {
         this.icon = icon;
     }
 
-    private String nama_os, deskripsi;
-    private int icon;
 
     public DataModel(String nama_os, String deskripsi, int icon) {
         this.nama_os = nama_os;
         this.deskripsi = deskripsi;
         this.icon = icon;
     }
+
 }

@@ -1,4 +1,4 @@
-package id.zainalfahrudin.orbit;
+package id.zainalfahrudin.orbit.barcode;
 
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.Tracker;

@@ -55,10 +55,12 @@ public class CustomAdapter extends BaseAdapter{
         ImageView ivIcon = (ImageView) convertView.findViewById(R.id.ivIcon);
 
         title.setText(data.get(position).getNama_os());
+
         desc.setText(data.get(position).getDeskripsi());
-//        ivIcon.setImageResource(data.get(position).getIcon());
+
         int icon = data.get(position).getIcon();
         ivIcon.setImageDrawable(context.getResources().getDrawable(icon));
+
         return convertView;
     }
 }
