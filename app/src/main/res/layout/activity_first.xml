@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
     tools:context="id.zainalfahrudin.orbit.activity.FirstActivity">
 
     <ScrollView
@@ -16,35 +17,25 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:id="@+id/viewBackgroundHeader"
-                android:background="@color/colorPrimary"/>
+                android:id="@+id/viewBackgroundHeader"/>
             <View
+                android:id="@+id/viewShadowHeader"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:layout_alignBottom="@+id/viewBackgroundHeader"
                 android:background="@drawable/overlay"/>
 
             <View
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="50dp"
-                android:layout_below="@+id/tvName"
+                android:layout_below="@+id/viewShadowHeader"
                 android:layout_width="match_parent"
-                android:visibility="gone"
-                android:background="@drawable/overlay_circle"
-                android:layout_height="wrap_content"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:visibility="visible"
+                android:layout_height="90dp"
                 android:background="@color/white"
-                android:rotation="180"
-                android:layout_below="@+id/viewBackgroundHeader"
                 />
+
 
             <id.zainalfahrudin.orbit.ui.CircleImageView
                 android:layout_width="150dp"
-                app:civ_border_color="#ffffff"
+                app:civ_border_color="@color/white"
                 app:civ_border_width="10dp"
                 android:layout_marginTop="75dp"
                 android:layout_centerHorizontal="true"
@@ -56,8 +47,10 @@
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/ivAva"
                 android:textSize="20sp"
+                android:background="@color/white"
                 android:textColor="@android:color/black"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center"
                 android:layout_height="wrap_content"
                 android:id="@+id/tvName"
                 android:text="@string/lorem_title"/>
@@ -90,6 +83,7 @@
             <TextView
                 android:padding="10dp"
                 android:layout_below="@+id/ivIco"
+                android:background="@color/white"
                 android:textSize="15sp"
                 android:layout_width="match_parent"
                 android:textColor="@color/black"
@@ -97,35 +91,35 @@
                 android:id="@+id/tvDesc"
                 android:text="@string/lorem_ipsum"/>
 
-                <View
-                    android:id="@+id/viewFooterBlue"
-                    android:layout_below="@+id/tvDesc"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_alignParentBottom="true"
-                    android:background="@color/colorPrimary"/>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:rotation="180"
-                    android:layout_alignTop="@+id/viewFooterBlue"
-                    android:background="@drawable/overlay"/>
-                <View
-                    android:id="@+id/viewFooterWhite"
-                    android:layout_below="@+id/tvDesc"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:background="@drawable/background_rounded"/>
+            <View
+                android:id="@+id/viewFooterBlue"
+                android:layout_below="@+id/tvDesc"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimary"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:rotation="180"
+                android:layout_alignTop="@+id/viewFooterBlue"
+                android:background="@drawable/overlay"/>
+            <View
+                android:id="@+id/viewFooterWhite"
+                android:layout_below="@+id/tvDesc"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/background_rounded"/>
 
-                <ImageView
-                    android:id="@+id/ivIco"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="20dp"
-                    android:visibility="gone"
-                    android:layout_below="@id/tvSubTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_insert_emoticon_black_48dp"/>
+            <ImageView
+                android:id="@+id/ivIco"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white"
+                android:visibility="visible"
+                android:layout_below="@id/tvSubTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_insert_emoticon_black_48dp"/>
             </RelativeLayout>
     </ScrollView>
 </RelativeLayout>

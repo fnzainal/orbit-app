@@ -19,7 +19,6 @@ public class FirstActivity extends AppCompatActivity {
         setContentView(R.layout.activity_first);
 
         CircleImageView imageView = (CircleImageView) findViewById(R.id.ivAva);
-
         TextView tvName = (TextView) findViewById(R.id.tvName);
         TextView tvDeskripsi = (TextView) findViewById(R.id.tvDesc);
 
@@ -28,12 +27,10 @@ public class FirstActivity extends AppCompatActivity {
         if (bundle!=null){
             String namaOs = bundle.getString(BelajarListView.TITLE_OS);
             String deskripsi = bundle.getString(BelajarListView.DESC);
-
-            Log.d(TAG, "onCreate: data intent = "+namaOs+", "+deskripsi);
+            int icon = bundle.getInt(BelajarListView.ICON);
 
             tvName.setText(namaOs);
             tvDeskripsi.setText(deskripsi);
-            int icon = bundle.getInt(BelajarListView.ICON);
             imageView.setImageDrawable(getResources().getDrawable(icon));
         }else{
             Log.d(TAG, "onCreate: bundle null");

@@ -27,13 +27,14 @@ public class BelajarListView extends AppCompatActivity{
     public static final String TITLE_OS = "os";
     public static final String DESC = "desk";
     public static final String ICON = "ico";
+    private ListView listView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_list_view);
 
-        final ListView listView = (ListView) findViewById(R.id.lvData);
+        listView = (ListView) findViewById(R.id.lvData);
 
 
         /*final String[] stringsArray = new String[] {
@@ -63,6 +64,10 @@ public class BelajarListView extends AppCompatActivity{
             }
         });*/
 
+        tampilkanData();
+    }
+
+    private void tampilkanData() {
         final List<DataModel> data = new ArrayList<>();
 
         data.add(new DataModel("Android", "Android is a mobile operating system developed by Google, based on the Linux kernel and designed primarily for touchscreen mobile devices such as smartphones and tablets. Android's user interface is mainly based on direct manipulation, using touch gestures that loosely correspond to real-world actions, such as swiping, tapping and pinching, to manipulate on-screen objects, along with a virtual keyboard for text input. In addition to touchscreen devices, Google has further developed Android TV for televisions, Android Auto for cars, and Android Wear for wrist watches, each with a specialized user interface. Variants of Android are also used on notebooks, game consoles, digital cameras, and other electronics.",
